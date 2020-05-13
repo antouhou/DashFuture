@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dash Future</title>
+    <link href="fontawesome/css/all.css" type="text/css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+        }
+        /* Generic styles */
+        .container {
+            max-width: 1140px;
+            margin: auto;
+        }
+        .padded {
+            padding: 1rem;
+        }
+        .flex {
+            display: flex;
+        }
+        .text-blue {
+            color: rgb(6,72,219)
+        }
+        .text-dark-blue {
+            color: rgb(58, 58, 149)
+        }
+        .text-purple {
+            color: rgb(98, 56, 255);
+        }
+        .mellow-background {
+            background-image: linear-gradient(to bottom right, rgb(6,72,219), rgb(241, 158,253));
+        }
+        .bright-background {
+            background: linear-gradient(to bottom right, rgb(1, 250, 255), rgb(98, 56, 255));
+        }
+        .bright-background-reverse {
+            background: linear-gradient(to bottom right, rgb(98, 56, 255), rgb(1, 250, 255));
+        }
+
+        /* Navigation */
+        .navigation {
+            padding: 0 10rem;
+            font-size: 0.9rem;
+        }
+        .navigation-logo {
+            font-weight: bold;
+            padding: 1rem;
+            font-size: 22px;
+        }
+        .navigation-list {
+            align-items: center;
+        }
+        .navigation-list-item {
+            padding: 0 1rem;
+            cursor: pointer;
+        }
+        .navigation-list-item:hover {
+            color: rgb(6,72,219);
+        }
+        .navigation-list-item:first-child {
+            padding: 0 1rem 0 2rem;
+        }
+
+        /* Big section on top */
+        .top {
+            color: white;
+            padding: 10rem 0;
+            font-weight: bold;
+        }
+        .top-caption {
+            font-size: 2rem;
+        }
+
+        /* Points */
+        .point-section {
+            padding: 4rem;
+        }
+        .point-section-header {
+            text-align: center;
+            font-size: 1.5rem;
+            padding-bottom: 1.5em;
+            font-weight: bold;
+        }
+        .points-container {
+            display: flex;
+        }
+        .point {
+            padding: 1rem;
+            flex: 1;
+        }
+        .point-header {
+            padding: 1rem 0;
+            font-weight: bold;
+        }
+        .point-content {
+            line-height: 1.4rem;
+            color: rgb(78, 95, 131);
+        }
+        .point-footer {
+            padding-top: 1rem;
+            cursor: pointer;
+        }
+        .point-footer a {
+            text-decoration: none;
+        }
+        .point-footer a:visited {
+            text-decoration: none;
+        }
+        .point-footer a i {
+            font-size: 12px;
+        }
+
+        .light-grey-background {
+            background: rgb(243, 245, 249);
+        }
+        .footer {
+
+        }
+        .footer-container {
+            font-size: 0.9rem;
+            color: #FFF;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="navigation">
+        <div class="flex">
+            <div class="navigation-logo text-blue">
+                <i class="fab fa-btc"></i> <span> Dash </span>
+            </div>
+            <div class="navigation-list flex">
+                <div class="navigation-list-item">Link</div>
+                <div class="navigation-list-item">Another link</div>
+                <div class="navigation-list-item">And one more</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="top bright-background">
+        <div class="container">
+            <div class="top-caption padded">Welcome</div>
+            <div class="top-text padded">This is a big fat header with a bold claim. We sure can do bold claims!</div>
+        </div>
+    </div>
+
+    <div class="point-section">
+        <div class="container">
+            <div class="point-section-header text-dark-blue">Here go some pinpoint about how cool we are</div>
+            <div class="points-container">
+                <div class="point">
+                    <div class="point-icon"><i class="fas fa-2x fa-coins text-purple"></i></div>
+                    <div class="point-header">Coins</div>
+                    <div class="point-content">This is a point about coins. Yes, we have coins, and you should too!</div>
+                    <div class="point-footer text-blue"><a href="#">Learn more <i class="fas fa-chevron-right"></i></a></div>
+                </div>
+                <div class="point">
+                    <div class="point-icon"><i class="fas fa-2x fa-chart-area text-purple"></i></div>
+                    <div class="point-header">Growth</div>
+                    <div class="point-content">Just look at this fancy chart. To the moon!</div>
+                    <div class="point-footer text-blue"><a href="#">Learn more <i class="fas fa-chevron-right"></i></a></div>
+                </div>
+                <div class="point">
+                    <div class="point-icon"><i class="fas fa-2x fa-chart-area text-purple"></i></div>
+                    <div class="point-header">Cool point header</div>
+                    <div class="point-content">Cool point text. Look how cool we are! Cooler than you might thought!</div>
+                    <div class="point-footer text-blue"><a href="#">Learn more <i class="fas fa-chevron-right"></i></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="point-section light-grey-background">
+        <div class="container">
+            <div class="point-section-header text-dark-blue">Can we be any cooler? Sure we can!</div>
+            <div class="points-container">
+                <div class="point">
+                    <div class="point-header">Cool point header</div>
+                    <div class="point-content">Cool point text. Look how cool we are! Cooler than you might thought!</div>
+                </div>
+                <div class="point">
+                    <div class="point-header">Cool point header</div>
+                    <div class="point-content">Cool point text. Look how cool we are! Cooler than you might thought!</div>
+                </div>
+                <div class="point">
+                    <div class="point-header">Cool point header</div>
+                    <div class="point-content">Cool point text. Look how cool we are! Cooler than you might thought!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer bright-background">
+        <div class="container">
+            <div class="footer-container">
+                <div>List header</div>
+                <div>
+                    <div>Link</div>
+                    <div>Another link</div>
+                    <div>Some other link</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
