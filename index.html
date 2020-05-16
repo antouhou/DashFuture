@@ -2,9 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dash Future</title>
+    <title>Dash Is The Future</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="static/img/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="static/img/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/img/icons/favicon-16x16.png">
     <link href="fontawesome/css/all.css" type="text/css" rel="stylesheet">
+
     <style>
+        @font-face {
+            font-family: Montserrat;
+            src: url(static/fonts/Montserrat-Regular.ttf);
+            font-weight: 400;
+        }
+        @font-face {
+            font-family: Montserrat;
+            src: url(static/fonts/Montserrat-SemiBold.ttf);
+            font-weight: 500;
+        }
+        @font-face {
+            font-family: Montserrat;
+            src: url(static/fonts/Montserrat-Bold.ttf);
+            font-weight: 600;
+        }
+
         body {
             margin: 0;
             font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -14,40 +34,112 @@
             max-width: 1140px;
             margin: auto;
         }
+        .container-small {
+            max-width: 840px;
+            margin: auto;
+        }
         .padded {
             padding: 1rem;
         }
         .flex {
             display: flex;
         }
+        .flex-vertical-centered {
+            align-items: center;
+        }
+        .flex-even-item {
+            flex: 1
+        }
+        .hidden {
+            visibility: hidden;
+            display: none;
+        }
+        .text-center {
+            text-align: center;
+        }
+
+        /* Text color scheme */
+        .text-white {
+            color: #FFFFFF;
+        }
+        .text-white-hover:hover {
+            color: #FFFFFF;
+        }
         .text-blue {
-            color: rgb(6,72,219)
+            color: #008de4;
+        }
+        .text-blue-hover:hover {
+            color: #008de4;
+        }
+        .text-blue-hover:hover:visited {
+            color: #008de4;
+        }
+        .text-blue-visited:visited{
+            color: #008de4;
         }
         .text-dark-blue {
-            color: rgb(58, 58, 149)
+            color: #012060;
+        }
+        .text-dark-blue-hover:hover {
+            color: #012060;
+        }
+        .text-dark-blue-visited:visited {
+            color: #012060;
+        }
+        .text-dark-blueish {
+            color: rgba(1, 32, 96, 0.5);
         }
         .text-purple {
             color: rgb(98, 56, 255);
         }
-        .mellow-background {
-            background-image: linear-gradient(to bottom right, rgb(6,72,219), rgb(241, 158,253));
+        .text-light-grey {
+            color: rgba(3, 27, 78, 0.7);
         }
-        .bright-background {
+        .text-dark-grey {
+            color: rgb(78, 95, 131);
+        }
+        .text-bright-gradient {
+            background: linear-gradient(to bottom right, rgb(98, 56, 255), rgb(1, 250, 255), rgb(98, 56, 255));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Background color scheme */
+        .mellow-background {
+            background: linear-gradient(to bottom right, rgb(6,72,219), rgb(241, 158,253));
+        }
+        .background-bright {
             background: linear-gradient(to bottom right, rgb(1, 250, 255), rgb(98, 56, 255));
         }
         .bright-background-reverse {
             background: linear-gradient(to bottom right, rgb(98, 56, 255), rgb(1, 250, 255));
         }
+        .background-white {
+            background: #FFFFFF;
+        }
+        .background-dark {
+            background: #012060;
+        }
+        .background-dark-gradient {
+            background: linear-gradient(to bottom right, #008de4, #012060);
+        }
+        .background-light {
+            background: rgb(243, 245, 249);
+        }
 
         /* Navigation */
         .navigation {
-            padding: 0 10rem;
             font-size: 0.9rem;
+            box-shadow: 0 -2px 7px gray;
+            position: fixed;
+            width: 100%;
+            max-height: 4rem;
         }
         .navigation-logo {
             font-weight: bold;
             padding: 1rem;
             font-size: 22px;
+            width: 80px;
         }
         .navigation-list {
             align-items: center;
@@ -55,9 +147,7 @@
         .navigation-list-item {
             padding: 0 1rem;
             cursor: pointer;
-        }
-        .navigation-list-item:hover {
-            color: rgb(6,72,219);
+            text-decoration: none;
         }
         .navigation-list-item:first-child {
             padding: 0 1rem 0 2rem;
@@ -65,23 +155,37 @@
 
         /* Big section on top */
         .top {
-            color: white;
-            padding: 10rem 0;
+            padding: 6rem 0 2em 0;
             font-weight: bold;
         }
         .top-caption {
             font-size: 2rem;
         }
+        .top-text {
+            font-weight: 400;
+            line-height: 1.5em;
+        }
 
         /* Points */
         .point-section {
-            padding: 4rem;
+            padding: 5rem;
         }
         .point-section-header {
             text-align: center;
             font-size: 1.5rem;
-            padding-bottom: 1.5em;
+            padding-bottom: 0.5em;
             font-weight: bold;
+        }
+        .point-section-text {
+            font-size: 1.2rem;
+            padding-bottom: 1.2rem;
+            text-align: center;
+        }
+        .point-section-intro {
+            font-size: 1rem;
+            text-align: center;
+            padding-bottom: 2rem;
+            line-height: 1.5rem;
         }
         .points-container {
             display: flex;
@@ -94,9 +198,11 @@
             padding: 1rem 0;
             font-weight: bold;
         }
+        .point-icon {
+
+        }
         .point-content {
             line-height: 1.4rem;
-            color: rgb(78, 95, 131);
         }
         .point-footer {
             padding-top: 1rem;
@@ -111,100 +217,271 @@
         .point-footer a i {
             font-size: 12px;
         }
-
-        .light-grey-background {
-            background: rgb(243, 245, 249);
+        .point-buttons-section {
+            flex: 1;
         }
-        .footer {
+        .point-button {
+            text-align: center;
+            cursor: pointer;
+            text-decoration: underline;
+            flex: 1
+        }
 
+        /* Grid points */
+        .grid-point-menu-item {
+            padding: 0.5rem 1.5rem;
+            border-left: aliceblue solid;
+            cursor: pointer;
+            font-weight: 500;
+            transition: color 0.25s linear;
+        }
+        .grid-point-menu-active {
+            border-left: #012060 solid;
+            color: #012060;
+            cursor: default;
+            transition: border-left-color 0.25s linear;
+        }
+        .grid-point-content {
+            flex: 1;
+        }
+
+        .double-section {
+            flex: 1;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 2rem 0;
         }
         .footer-container {
             font-size: 0.9rem;
-            color: #FFF;
             padding: 1rem;
+        }
+        .footer-list-header {
+            padding-bottom: 0.5rem;
+        }
+        .footer-list-item {
+            padding: 0.2rem 0;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
 <div>
-    <div class="navigation">
-        <div class="flex">
-            <div class="navigation-logo text-blue">
-                <i class="fab fa-btc"></i> <span> Dash </span>
+    <div class="background-bright">
+        <div class="navigation background-white">
+            <div class="flex container">
+                <div class="navigation-logo text-blue">
+                    <a href="#"><img src="static/img/logo-dark.svg" alt="logo"></a>
+                </div>
+                <div class="navigation-list flex text-dark-blue">
+                    <div class="navigation-list-item text-blue-hover">Link</div>
+                    <div class="navigation-list-item text-blue-hover">Another link</div>
+                    <a
+                        class="navigation-list-item text-dark-blue-visited text-blue-hover"
+                        href="https://dashplatform.readme.io/docs/introduction-what-is-dash-platform"
+                        target="_blank"
+                    >
+                        Developer documentation
+                    </a>
+                </div>
             </div>
-            <div class="navigation-list flex">
-                <div class="navigation-list-item">Link</div>
-                <div class="navigation-list-item">Another link</div>
-                <div class="navigation-list-item">And one more</div>
+        </div>
+
+        <div class="container flex flex-vertical-centered top text-white">
+            <div class="flex-even-item">
+                <div class="top-caption padded">Welcome to the payment infrastructure of the future.</div>
+                <div class="top-text padded">
+                    We are building the best payment experience and decentralized cloud infrastructure of the future.
+                    Meet Dash Platform, a new step in development for Dash.
+                </div>
+            </div>
+            <div class="flex-even-item">
+                <img src="static/img/header-image.svg"  alt="header image"/>
             </div>
         </div>
     </div>
 
-    <div class="top bright-background">
+    <div class="point-section background-white">
         <div class="container">
-            <div class="top-caption padded">Welcome</div>
-            <div class="top-text padded">This is a big fat header with a bold claim. We sure can do bold claims!</div>
+            <div class="point-section-header text-dark-blue">DashPay - Username payments without any hassle</div>
+            <div class="point-section-text text-dark-grey">
+                Send funds to your friends using their username, privately.
+                No more addresses or cryptographic knowledge required.
+            </div>
+
+            <div class="points-container container-small">
+                <div class="point">
+                    <div class="point-icon text-center"><i class="fas fa-2x fa-magic text-bright-gradient"></i></div>
+                    <div class="point-header text-center">Easy</div>
+                    <div class="point-content text-dark-grey">
+                        Payments with crypto never been easier: just press one button, and funds is already there. Instantly.
+                    </div>
+                </div>
+                <div class="point">
+                    <div class="point-icon text-center"><i class="fas fa-2x fa-eye-slash text-bright-gradient"></i></div>
+                    <div class="point-header text-center">Private</div>
+                    <div class="point-content text-dark-grey">
+                        Only two parties exchanging the funds can trace transaction. No spectators. No traces to names.
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex point-buttons-section">
+                <div class="point-button text-blue text-dark-blue-hover">
+                    <div>Learn how this works  <i class="fas fa-chevron-down"></i></div>
+                </div>
+                <div class="point-button text-blue text-dark-blue-hover">
+                    <div>See the demo  <i class="fas fa-chevron-right"></i></div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="point-section">
+    <div class="point-section background-light">
         <div class="container">
-            <div class="point-section-header text-dark-blue">Here go some pinpoint about how cool we are</div>
+            <div class="point-section-header text-dark-blue">Dash Platform - Deploy your app to a decentralized cloud</div>
+            <div class="point-section-text text-dark-grey">
+                Deploy your apps to the decentralized cloud storage. Access it on the web and mobile with an HTTP API.
+            </div>
             <div class="points-container">
                 <div class="point">
-                    <div class="point-icon"><i class="fas fa-2x fa-coins text-purple"></i></div>
-                    <div class="point-header">Coins</div>
-                    <div class="point-content">This is a point about coins. Yes, we have coins, and you should too!</div>
+                    <div class="point-icon"><i class="fas fa-2x fa-coins text-bright-gradient"></i></div>
+                    <div class="point-header">Developer-centric</div>
+                    <div class="point-content text-dark-grey">Dash platform built with the convenience of the developer in mind. Platform is easy to work with</div>
+                    <div class="point-footer text-blue">
+                        <a href="https://dashplatform.readme.io/docs/introduction-what-is-dash-platform"
+                           target="_blank">
+                            Check out the docs <i class="fas fa-chevron-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="point">
+                    <div class="point-icon"><i class="fas fa-2x fa-sitemap text-bright-gradient"></i></div>
+                    <div class="point-header">Fast</div>
+                    <div class="point-content text-dark-grey">Unlike Bitcoin and a lot of other cryptocurrencies, Dash has masternode system - users can get rewards for running a full node, which means that masternodes are incentivized to scale their nodes up to better serve the network
+                    </div>
                     <div class="point-footer text-blue"><a href="#">Learn more <i class="fas fa-chevron-right"></i></a></div>
                 </div>
                 <div class="point">
-                    <div class="point-icon"><i class="fas fa-2x fa-chart-area text-purple"></i></div>
-                    <div class="point-header">Growth</div>
-                    <div class="point-content">Just look at this fancy chart. To the moon!</div>
+                    <div class="point-icon"><i class="fas fa-2x fa-chart-area text-bright-gradient"></i></div>
+                    <div class="point-header">Verifiable</div>
+                    <div class="point-content text-dark-grey">Dash development is funded from the treasury, which is currently 10% of mining rewards. That means that no ICOs or any additional funding is needed to continue the development</div>
                     <div class="point-footer text-blue"><a href="#">Learn more <i class="fas fa-chevron-right"></i></a></div>
                 </div>
                 <div class="point">
-                    <div class="point-icon"><i class="fas fa-2x fa-chart-area text-purple"></i></div>
-                    <div class="point-header">Cool point header</div>
-                    <div class="point-content">Cool point text. Look how cool we are! Cooler than you might thought!</div>
+                    <div class="point-icon"><i class="fas fa-2x fa-chart-area text-bright-gradient"></i></div>
+                    <div class="point-header">Secure</div>
+                    <div class="point-content text-dark-grey">Dash development is funded from the treasury, which is currently 10% of mining rewards. That means that no ICOs or any additional funding is needed to continue the development</div>
                     <div class="point-footer text-blue"><a href="#">Learn more <i class="fas fa-chevron-right"></i></a></div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="point-section light-grey-background">
-        <div class="container">
-            <div class="point-section-header text-dark-blue">Can we be any cooler? Sure we can!</div>
-            <div class="points-container">
-                <div class="point">
-                    <div class="point-header">Cool point header</div>
-                    <div class="point-content">Cool point text. Look how cool we are! Cooler than you might thought!</div>
+    <div class="point-section background-white">
+        <div class="container-small flex">
+            <div>
+                <div class="point-section-header text-dark-blue">Learn about other Dash features</div>
+                <div class="point-section-text text-dark-grey">
+                    And that's on top of the amazing features Dash already has today.
+                    Instant payments confirmed in 1 second.
+                    Scalable and decentralized network.
+                    Self-funded development team.
                 </div>
-                <div class="point">
-                    <div class="point-header">Cool point header</div>
-                    <div class="point-content">Cool point text. Look how cool we are! Cooler than you might thought!</div>
-                </div>
-                <div class="point">
-                    <div class="point-header">Cool point header</div>
-                    <div class="point-content">Cool point text. Look how cool we are! Cooler than you might thought!</div>
+                <div class="points-container">
+                    <div class="flex">
+
+                        <div class="grid-point-menu">
+                            <div class="grid-point-menu-item text-dark-blueish text-dark-blue-hover grid-point-menu-active" data-activate="instant">
+                                <i class="fas fa-tachometer-alt text-bright-gradient"></i>
+                                Instant
+                            </div>
+                            <div class="grid-point-menu-item text-dark-blueish text-dark-blue-hover" data-activate="scalable">
+                                <i class="fas fa-sitemap text-bright-gradient"></i>
+                                Scalable
+                            </div>
+                            <div class="grid-point-menu-item text-dark-blueish text-dark-blue-hover" data-activate="sustainable">
+                                <i class="fas fa-chart-line text-bright-gradient"></i>
+                                Sustainable
+                            </div>
+                            <div class="grid-point-menu-item text-dark-blueish text-dark-blue-hover" data-activate="private">
+                                <i class="fas fa-key text-bright-gradient"></i>
+                                Private
+                            </div>
+                        </div>
+
+                        <div class="grid-point-content" id="grid-switch-1">
+                            <div class="point" id="instant">
+                                <div class="point-content text-dark-grey">Instant transactions: by default, all dash transactions are confirmed in just under 2 seconds!</div>
+                                <div class="point-footer text-blue"><a href="#">Learn more <i class="fas fa-chevron-right"></i></a></div>
+                            </div>
+                            <div class="point hidden" id="scalable">
+                                <div class="point-content text-dark-grey">Unlike Bitcoin and a lot of other cryptocurrencies, Dash has masternode system - users can get rewards for running a full node, which means that masternodes are incentivized to scale their nodes up to better serve the network
+                                </div>
+                                <div class="point-footer text-blue"><a href="#">Learn more <i class="fas fa-chevron-right"></i></a></div>
+                            </div>
+                            <div class="point hidden" id="sustainable">
+                                <div class="point-content text-dark-grey">Dash development is funded from the treasury, which is currently 10% of mining rewards. That means that no ICOs or any additional funding is needed to continue the development</div>
+                                <div class="point-footer text-blue"><a href="#">Learn more <i class="fas fa-chevron-right"></i></a></div>
+                            </div>
+                            <div class="point hidden" id="private">
+                                <div class="point-content text-dark-grey">Dash development is funded from the treasury, which is currently 10% of mining rewards. That means that no ICOs or any additional funding is needed to continue the development</div>
+                                <div class="point-footer text-blue"><a href="#">Learn more <i class="fas fa-chevron-right"></i></a></div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="footer bright-background">
+    <div class="footer background-dark">
         <div class="container">
-            <div class="footer-container">
-                <div>List header</div>
-                <div>
-                    <div>Link</div>
-                    <div>Another link</div>
-                    <div>Some other link</div>
+            <div class="footer-container text-white">
+                <div class="footer-list-header">List header</div>
+                <div class="text-dark-grey">
+                    <div class="footer-list-item text-white-hover">Link</div>
+                    <div class="footer-list-item text-white-hover">Another link</div>
+                    <div class="footer-list-item text-white-hover">Some other link</div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    function clickCallback(event) {
+        // Button and content that were clicked
+        const toActivateMenuItem = event.target;
+        const toActivateContentId = toActivateMenuItem.getAttribute('data-activate');
+        const toActivateContentEntry = document.getElementById(toActivateContentId);
+
+        // Currently active button and content
+        const currentActiveMenuItem = document.getElementsByClassName("grid-point-menu-active").item(0);
+        const currentActiveContentEntry = document.getElementById(currentActiveMenuItem.getAttribute('data-activate'));
+
+        // Deactivate currently active item
+        currentActiveMenuItem.classList.toggle("grid-point-menu-active");
+        currentActiveContentEntry.classList.toggle("hidden");
+
+        // Activate new item
+        toActivateMenuItem.classList.toggle("grid-point-menu-active");
+        toActivateContentEntry.classList.toggle('hidden');
+    }
+
+    (function () {
+        document.addEventListener("DOMContentLoaded", function(){
+            const buttons = document.getElementsByClassName("grid-point-menu-item");
+
+            for (let i=0; i<buttons.length; i++) {
+                const button = buttons.item(i);
+                button.addEventListener('click', clickCallback);
+            }
+        });
+    })();
+</script>
+
 </body>
 </html>
