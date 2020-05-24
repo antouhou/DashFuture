@@ -103,10 +103,6 @@ h1, h2, h3, h4, h5, h6 {
     color: #FFFFFF;
 }
 
-.text-gery-visited:visited {
-    color: rgb(78, 95, 131);
-}
-
 .text-blue {
     color: #008de4;
 }
@@ -148,6 +144,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-dark-grey {
+    color: rgb(78, 95, 131);
+}
+
+.text-dark-grey-visited:visited {
     color: rgb(78, 95, 131);
 }
 
@@ -353,6 +353,11 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1rem;
 }
 
+.footer-kek {
+    justify-content: space-evenly;
+    width: 100%;
+}
+
 .footer-list-header {
     padding-bottom: 0.5rem;
 }
@@ -362,4 +367,8 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0.2rem 0;
     cursor: pointer;
     text-decoration: none;
+}
+
+.footer-signature {
+    align-self: end;
 }
