@@ -99,6 +99,14 @@ h1, h2, h3, h4, h5, h6 {
     color: #FFFFFF;
 }
 
+.text-white-hover:hover:visited {
+    color: #FFFFFF;
+}
+
+.text-gery-visited:visited {
+    color: rgb(78, 95, 131);
+}
+
 .text-blue {
     color: #008de4;
 }
@@ -350,6 +358,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-list-item {
+    display: block;
     padding: 0.2rem 0;
     cursor: pointer;
+    text-decoration: none;
 }
