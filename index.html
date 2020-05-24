@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Dash Is The Future</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="static/img/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="static/img/icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="static/img/icons/favicon-16x16.png">
-    <link href="fontawesome/css/all.css" type="text/css" rel="stylesheet">
+    <link href="static/img/icons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="static/img/icons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
+    <link href="static/img/icons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
+    <link href="fontawesome/css/all.css" rel="stylesheet" type="text/css">
 
     <style>
         @font-face {
@@ -14,46 +14,80 @@
             src: url(static/fonts/Montserrat-Regular.ttf);
             font-weight: 400;
         }
+
         @font-face {
             font-family: Montserrat;
             src: url(static/fonts/Montserrat-SemiBold.ttf);
             font-weight: 500;
         }
+
         @font-face {
             font-family: Montserrat;
             src: url(static/fonts/Montserrat-Bold.ttf);
             font-weight: 600;
         }
 
+        @font-face {
+            font-family: "Open Sans";
+            src: url(static/fonts/OpenSans-Regular.ttf);
+            font-weight: 400;
+        }
+
+        @font-face {
+            font-family: "Open Sans";
+            src: url(static/fonts/OpenSans-SemiBold.ttf);
+            font-weight: 500;
+        }
+
+        @font-face {
+            font-family: "Open Sans";
+            src: url(static/fonts/OpenSans-Bold.ttf);
+            font-weight: 600;
+        }
+
         body {
             margin: 0;
-            font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
         }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+            padding: 0;
+            margin: 0;
+        }
+
         /* Generic styles */
         .container {
             max-width: 1140px;
             margin: auto;
         }
+
         .container-small {
             max-width: 840px;
             margin: auto;
         }
+
         .padded {
             padding: 1rem;
         }
+
         .flex {
             display: flex;
         }
+
         .flex-vertical-centered {
             align-items: center;
         }
+
         .flex-even-item {
             flex: 1
         }
+
         .hidden {
             visibility: hidden;
             display: none;
         }
+
         .text-center {
             text-align: center;
         }
@@ -62,42 +96,55 @@
         .text-white {
             color: #FFFFFF;
         }
+
         .text-white-hover:hover {
             color: #FFFFFF;
         }
+
         .text-blue {
             color: #008de4;
         }
+
         .text-blue-hover:hover {
             color: #008de4;
         }
+
         .text-blue-hover:hover:visited {
             color: #008de4;
         }
-        .text-blue-visited:visited{
+
+        .text-blue-visited:visited {
             color: #008de4;
         }
+
         .text-dark-blue {
             color: #012060;
         }
+
         .text-dark-blue-hover:hover {
             color: #012060;
         }
+
         .text-dark-blue-visited:visited {
             color: #012060;
         }
+
         .text-dark-blueish {
             color: rgba(1, 32, 96, 0.5);
         }
+
         .text-purple {
             color: rgb(98, 56, 255);
         }
+
         .text-light-grey {
             color: rgba(3, 27, 78, 0.7);
         }
+
         .text-dark-grey {
             color: rgb(78, 95, 131);
         }
+
         .text-bright-gradient {
             background: linear-gradient(to bottom right, rgb(98, 56, 255), rgb(1, 250, 255), rgb(98, 56, 255));
             -webkit-background-clip: text;
@@ -106,23 +153,29 @@
 
         /* Background color scheme */
         .mellow-background {
-            background: linear-gradient(to bottom right, rgb(6,72,219), rgb(241, 158,253));
+            background: linear-gradient(to bottom right, rgb(6, 72, 219), rgb(241, 158, 253));
         }
+
         .background-bright {
             background: linear-gradient(to bottom right, rgb(1, 250, 255), rgb(98, 56, 255));
         }
+
         .bright-background-reverse {
             background: linear-gradient(to bottom right, rgb(98, 56, 255), rgb(1, 250, 255));
         }
+
         .background-white {
             background: #FFFFFF;
         }
+
         .background-dark {
             background: #012060;
         }
+
         .background-dark-gradient {
             background: linear-gradient(to bottom right, #008de4, #012060);
         }
+
         .background-light {
             background: rgb(243, 245, 249);
         }
@@ -135,20 +188,24 @@
             width: 100%;
             max-height: 4rem;
         }
+
         .navigation-logo {
             font-weight: bold;
             padding: 1rem;
             font-size: 22px;
             width: 80px;
         }
+
         .navigation-list {
             align-items: center;
         }
+
         .navigation-list-item {
             padding: 0 1rem;
             cursor: pointer;
             text-decoration: none;
         }
+
         .navigation-list-item:first-child {
             padding: 0 1rem 0 2rem;
         }
@@ -158,68 +215,86 @@
             padding: 6rem 0 2em 0;
             font-weight: bold;
         }
+
         .top-caption {
             font-size: 2rem;
         }
+
         .top-text {
             font-weight: 400;
             line-height: 1.5em;
+            font-size: 1.2rem;
         }
 
         /* Points */
         .point-section {
             padding: 5rem;
         }
+
         .point-section-header {
             text-align: center;
             font-size: 1.5rem;
             padding-bottom: 0.5em;
             font-weight: bold;
         }
+
         .point-section-text {
             font-size: 1.2rem;
             padding-bottom: 1.2rem;
             text-align: center;
         }
+
         .point-section-intro {
             font-size: 1rem;
             text-align: center;
             padding-bottom: 2rem;
             line-height: 1.5rem;
         }
+
         .points-container {
             display: flex;
         }
+
         .point {
             padding: 1rem;
             flex: 1;
         }
+
         .point-header {
             padding: 1rem 0;
-            font-weight: bold;
+            font-size: 1.2rem;
+            /* font-weight: bold; */
         }
+
         .point-icon {
 
         }
+
         .point-content {
             line-height: 1.4rem;
         }
+
         .point-footer {
             padding-top: 1rem;
             cursor: pointer;
         }
+
         .point-footer a {
             text-decoration: none;
         }
+
         .point-footer a:visited {
             text-decoration: none;
         }
+
         .point-footer a i {
             font-size: 12px;
         }
+
         .point-buttons-section {
             flex: 1;
         }
+
         .point-button {
             text-align: center;
             cursor: pointer;
@@ -235,12 +310,14 @@
             font-weight: 500;
             transition: color 0.25s linear;
         }
+
         .grid-point-menu-active {
             border-left: #012060 solid;
             color: #012060;
             cursor: default;
             transition: border-left-color 0.25s linear;
         }
+
         .grid-point-content {
             flex: 1;
         }
@@ -253,13 +330,16 @@
         .footer {
             padding: 2rem 0;
         }
+
         .footer-container {
             font-size: 0.9rem;
             padding: 1rem;
         }
+
         .footer-list-header {
             padding-bottom: 0.5rem;
         }
+
         .footer-list-item {
             padding: 0.2rem 0;
             cursor: pointer;
@@ -272,15 +352,15 @@
         <div class="navigation background-white">
             <div class="flex container">
                 <div class="navigation-logo text-blue">
-                    <a href="#"><img src="static/img/logo-dark.svg" alt="logo"></a>
+                    <a href="#"><img alt="logo" src="static/img/logo-dark.svg"></a>
                 </div>
                 <div class="navigation-list flex text-dark-blue">
                     <div class="navigation-list-item text-blue-hover">Link</div>
                     <div class="navigation-list-item text-blue-hover">Another link</div>
                     <a
-                        class="navigation-list-item text-dark-blue-visited text-blue-hover"
-                        href="https://dashplatform.readme.io/docs/introduction-what-is-dash-platform"
-                        target="_blank"
+                            class="navigation-list-item text-dark-blue-visited text-blue-hover"
+                            href="https://dashplatform.readme.io/docs/introduction-what-is-dash-platform"
+                            target="_blank"
                     >
                         Developer documentation
                     </a>
@@ -290,49 +370,63 @@
 
         <div class="container flex flex-vertical-centered top text-white">
             <div class="flex-even-item">
-                <div class="top-caption padded">Welcome to the payment infrastructure of the future.</div>
+                <div class="top-caption padded">
+                    <h3>Welcome to the payment infrastructure of the future.</h3>
+                </div>
                 <div class="top-text padded">
                     We are building the best payment experience and decentralized cloud infrastructure of the future.
                     Meet Dash Platform, a new step in development for Dash.
                 </div>
             </div>
             <div class="flex-even-item">
-                <img src="static/img/header-image.svg"  alt="header image"/>
+                <img alt="header image" src="static/img/header-image.svg"/>
             </div>
         </div>
     </div>
 
     <div class="point-section background-white">
         <div class="container">
-            <div class="point-section-header text-dark-blue">DashPay - Username payments without any hassle</div>
+            <div class="point-section-header text-dark-blue">
+                <h3>
+                    DashPay - Username payments without any hassle
+                </h3>
+            </div>
             <div class="point-section-text text-dark-grey">
-                Send funds to your friends using their username, privately.
-                No more addresses or cryptographic knowledge required.
+                Send funds to your friends using their username, privately. No more addresses or cryptographic knowledge
+                required.
             </div>
 
             <div class="points-container container-small">
                 <div class="point">
-                    <div class="point-icon text-center"><i class="fas fa-2x fa-magic text-bright-gradient"></i></div>
-                    <div class="point-header text-center">Easy</div>
+                    <div>
+                        <div class="point-icon text-center"><i class="fas fa-2x fa-magic text-bright-gradient"></i>
+                        </div>
+                        <div class="point-header text-dark-blue text-center">Easy</div>
+                    </div>
                     <div class="point-content text-dark-grey">
-                        Payments with crypto never been easier: just press one button, and funds is already there. Instantly.
+                        Payments with crypto never been easier: just press one button, and funds is already there.
+                        Instantly.
                     </div>
                 </div>
                 <div class="point">
-                    <div class="point-icon text-center"><i class="fas fa-2x fa-eye-slash text-bright-gradient"></i></div>
-                    <div class="point-header text-center">Private</div>
+                    <div>
+                        <div class="point-icon text-center"><i class="fas fa-2x fa-eye-slash text-bright-gradient"></i>
+                        </div>
+                        <div class="point-header text-dark-blue text-center">Private</div>
+                    </div>
                     <div class="point-content text-dark-grey">
-                        Only two parties exchanging the funds can trace transaction. No spectators. No traces to names.
+                        Only two parties exchanging the funds can trace the transaction. No spectators. No traces to
+                        names.
                     </div>
                 </div>
             </div>
 
-            <div class="flex point-buttons-section">
+            <div class="flex container-small point-buttons-section">
                 <div class="point-button text-blue text-dark-blue-hover">
-                    <div>Learn how this works  <i class="fas fa-chevron-down"></i></div>
+                    <div>Learn how it works <i class="fas fa-chevron-down"></i></div>
                 </div>
                 <div class="point-button text-blue text-dark-blue-hover">
-                    <div>See the demo  <i class="fas fa-chevron-right"></i></div>
+                    <div>See the demo <i class="fas fa-chevron-right"></i></div>
                 </div>
             </div>
         </div>
@@ -340,15 +434,22 @@
 
     <div class="point-section background-light">
         <div class="container">
-            <div class="point-section-header text-dark-blue">Dash Platform - Deploy your app to a decentralized cloud</div>
+            <div class="point-section-header text-dark-blue">
+                <h3>
+                    Dash Platform - Deploy your app to a decentralized cloud
+                </h3>
+            </div>
             <div class="point-section-text text-dark-grey">
                 Deploy your apps to the decentralized cloud storage. Access it on the web and mobile with an HTTP API.
             </div>
             <div class="points-container">
                 <div class="point">
-                    <div class="point-icon"><i class="fas fa-2x fa-coins text-bright-gradient"></i></div>
-                    <div class="point-header">Developer-centric</div>
-                    <div class="point-content text-dark-grey">Dash platform built with the convenience of the developer in mind. Platform is easy to work with</div>
+                    <div class="point-icon"><i class="fas fa-2x fa-laptop-code text-bright-gradient"></i></div>
+                    <div class="point-header text-dark-blue">Developer-centric</div>
+                    <div class="point-content text-dark-grey">
+                        Dash platform built with the convenience of the developer in mind. We provide convenient SDKs
+                        and comprehensive documentation.
+                    </div>
                     <div class="point-footer text-blue">
                         <a href="https://dashplatform.readme.io/docs/introduction-what-is-dash-platform"
                            target="_blank">
@@ -357,23 +458,42 @@
                     </div>
                 </div>
                 <div class="point">
-                    <div class="point-icon"><i class="fas fa-2x fa-sitemap text-bright-gradient"></i></div>
-                    <div class="point-header">Fast</div>
-                    <div class="point-content text-dark-grey">Unlike Bitcoin and a lot of other cryptocurrencies, Dash has masternode system - users can get rewards for running a full node, which means that masternodes are incentivized to scale their nodes up to better serve the network
+                    <div>
+                        <div class="point-icon"><i class="fas fa-2x fa-tachometer-alt text-bright-gradient"></i></div>
+                        <div class="point-header text-dark-blue">Fast</div>
                     </div>
-                    <div class="point-footer text-blue"><a href="#">Learn more <i class="fas fa-chevron-right"></i></a></div>
+                    <div class="point-content text-dark-grey">
+                        Dash Platform provides the same ease of use and speed as established centralized Database as a
+                        Service solutions
+                    </div>
+                    <div class="point-footer text-blue"><a href="#">Learn more <i class="fas fa-chevron-right"></i></a>
+                    </div>
                 </div>
                 <div class="point">
-                    <div class="point-icon"><i class="fas fa-2x fa-chart-area text-bright-gradient"></i></div>
-                    <div class="point-header">Verifiable</div>
-                    <div class="point-content text-dark-grey">Dash development is funded from the treasury, which is currently 10% of mining rewards. That means that no ICOs or any additional funding is needed to continue the development</div>
-                    <div class="point-footer text-blue"><a href="#">Learn more <i class="fas fa-chevron-right"></i></a></div>
+                    <div>
+                        <div class="point-icon"><i class="fas fa-2x fa-shield-alt text-bright-gradient"></i></div>
+                        <div class="point-header text-dark-blue">
+                            Verifiable & Secure
+                        </div>
+                    </div>
+                    <div class="point-content text-dark-grey">
+                        Unlike centralized solutions, all data stored on Dash Platform is always cryptographically
+                        verifiable.
+                    </div>
+                    <div class="point-footer text-blue"><a href="#">Learn more <i class="fas fa-chevron-right"></i></a>
+                    </div>
                 </div>
                 <div class="point">
-                    <div class="point-icon"><i class="fas fa-2x fa-chart-area text-bright-gradient"></i></div>
-                    <div class="point-header">Secure</div>
-                    <div class="point-content text-dark-grey">Dash development is funded from the treasury, which is currently 10% of mining rewards. That means that no ICOs or any additional funding is needed to continue the development</div>
-                    <div class="point-footer text-blue"><a href="#">Learn more <i class="fas fa-chevron-right"></i></a></div>
+                    <div>
+                        <div class="point-icon"><i class="fas fa-2x fa-server text-bright-gradient"></i></div>
+                        <div class="point-header text-dark-blue">Resilient</div>
+                    </div>
+                    <div class="point-content text-dark-grey">
+                        The data is distributed across all masternodes in the Dash network, located all over the world.
+                        That makes it hard to take the network down or censor the data.
+                    </div>
+                    <div class="point-footer text-blue"><a href="#">Learn more <i class="fas fa-chevron-right"></i></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -382,7 +502,9 @@
     <div class="point-section background-white">
         <div class="container-small flex">
             <div>
-                <div class="point-section-header text-dark-blue">Learn about other Dash features</div>
+                <div class="point-section-header text-dark-blue">
+                    <h3>Learn about other Dash features</h3>
+                </div>
                 <div class="point-section-text text-dark-grey">
                     And that's on top of the amazing features Dash already has today.
                     Instant payments confirmed in 1 second.
@@ -393,19 +515,23 @@
                     <div class="flex">
 
                         <div class="grid-point-menu">
-                            <div class="grid-point-menu-item text-dark-blueish text-dark-blue-hover grid-point-menu-active" data-activate="instant">
+                            <div class="grid-point-menu-item text-dark-blueish text-dark-blue-hover grid-point-menu-active"
+                                 data-activate="instant">
                                 <i class="fas fa-tachometer-alt text-bright-gradient"></i>
                                 Instant
                             </div>
-                            <div class="grid-point-menu-item text-dark-blueish text-dark-blue-hover" data-activate="scalable">
+                            <div class="grid-point-menu-item text-dark-blueish text-dark-blue-hover"
+                                 data-activate="scalable">
                                 <i class="fas fa-sitemap text-bright-gradient"></i>
                                 Scalable
                             </div>
-                            <div class="grid-point-menu-item text-dark-blueish text-dark-blue-hover" data-activate="sustainable">
+                            <div class="grid-point-menu-item text-dark-blueish text-dark-blue-hover"
+                                 data-activate="sustainable">
                                 <i class="fas fa-chart-line text-bright-gradient"></i>
                                 Sustainable
                             </div>
-                            <div class="grid-point-menu-item text-dark-blueish text-dark-blue-hover" data-activate="private">
+                            <div class="grid-point-menu-item text-dark-blueish text-dark-blue-hover"
+                                 data-activate="private">
                                 <i class="fas fa-key text-bright-gradient"></i>
                                 Private
                             </div>
@@ -413,21 +539,38 @@
 
                         <div class="grid-point-content" id="grid-switch-1">
                             <div class="point" id="instant">
-                                <div class="point-content text-dark-grey">Instant transactions: by default, all dash transactions are confirmed in just under 2 seconds!</div>
-                                <div class="point-footer text-blue"><a href="#">Learn more <i class="fas fa-chevron-right"></i></a></div>
+                                <div class="point-content text-dark-grey">
+                                    By default, all Dash transactions are confirmed in about 1 second!
+                                </div>
+                                <div class="point-footer text-blue"><a href="#">Learn more <i
+                                        class="fas fa-chevron-right"></i></a></div>
                             </div>
                             <div class="point hidden" id="scalable">
-                                <div class="point-content text-dark-grey">Unlike Bitcoin and a lot of other cryptocurrencies, Dash has masternode system - users can get rewards for running a full node, which means that masternodes are incentivized to scale their nodes up to better serve the network
+                                <div class="point-content text-dark-grey">
+                                    Unlike Bitcoin and a lot of other cryptocurrencies, Dash has masternode system -
+                                    users can get rewards for running a full node, which means that masternodes are
+                                    incentivized to scale their nodes up to better serve the network
                                 </div>
-                                <div class="point-footer text-blue"><a href="#">Learn more <i class="fas fa-chevron-right"></i></a></div>
+                                <div class="point-footer text-blue"><a href="#">Learn more <i
+                                        class="fas fa-chevron-right"></i></a></div>
                             </div>
                             <div class="point hidden" id="sustainable">
-                                <div class="point-content text-dark-grey">Dash development is funded from the treasury, which is currently 10% of mining rewards. That means that no ICOs or any additional funding is needed to continue the development</div>
-                                <div class="point-footer text-blue"><a href="#">Learn more <i class="fas fa-chevron-right"></i></a></div>
+                                <div class="point-content text-dark-grey">
+                                    Dash development is funded from the treasury, which is currently 10% of mining
+                                    rewards. That means that no ICOs or any additional funding is needed to continue the
+                                    development
+                                </div>
+                                <div class="point-footer text-blue"><a href="#">Learn more <i
+                                        class="fas fa-chevron-right"></i></a></div>
                             </div>
                             <div class="point hidden" id="private">
-                                <div class="point-content text-dark-grey">Dash development is funded from the treasury, which is currently 10% of mining rewards. That means that no ICOs or any additional funding is needed to continue the development</div>
-                                <div class="point-footer text-blue"><a href="#">Learn more <i class="fas fa-chevron-right"></i></a></div>
+                                <div class="point-content text-dark-grey">
+                                    Dash provides additional privacy in a form of built-in CoinJoin - PrivateSend. The
+                                    fact that this technology is also possible to use in Bitcoin using a specialized
+                                    service makes Dash exactly the same as Bitcoin from the regulatory perspective.
+                                </div>
+                                <div class="point-footer text-blue"><a href="#">Learn more <i
+                                        class="fas fa-chevron-right"></i></a></div>
                             </div>
                         </div>
 
@@ -472,10 +615,10 @@
     }
 
     (function () {
-        document.addEventListener("DOMContentLoaded", function(){
+        document.addEventListener("DOMContentLoaded", function () {
             const buttons = document.getElementsByClassName("grid-point-menu-item");
 
-            for (let i=0; i<buttons.length; i++) {
+            for (let i = 0; i < buttons.length; i++) {
                 const button = buttons.item(i);
                 button.addEventListener('click', clickCallback);
             }
