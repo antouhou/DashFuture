@@ -1,0 +1,355 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(static/fonts/Montserrat-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(static/fonts/Montserrat-SemiBold.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(static/fonts/Montserrat-Bold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(static/fonts/OpenSans-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(static/fonts/OpenSans-SemiBold.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(static/fonts/OpenSans-Bold.ttf);
+    font-weight: 600;
+}
+
+body {
+    margin: 0;
+    font-family: "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+/* Generic styles */
+.container {
+    max-width: 1140px;
+    margin: auto;
+}
+
+.container-small {
+    max-width: 840px;
+    margin: auto;
+}
+
+.padded {
+    padding: 1rem;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-vertical-centered {
+    align-items: center;
+}
+
+.flex-even-item {
+    flex: 1
+}
+
+.hidden {
+    display: none;
+    height: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+/* Text color scheme */
+.text-white {
+    color: #FFFFFF;
+}
+
+.text-white-hover:hover {
+    color: #FFFFFF;
+}
+
+.text-blue {
+    color: #008de4;
+}
+
+.text-blue-hover:hover {
+    color: #008de4;
+}
+
+.text-blue-hover:hover:visited {
+    color: #008de4;
+}
+
+.text-blue-visited:visited {
+    color: #008de4;
+}
+
+.text-dark-blue {
+    color: #012060;
+}
+
+.text-dark-blue-hover:hover {
+    color: #012060;
+}
+
+.text-dark-blue-visited:visited {
+    color: #012060;
+}
+
+.text-dark-blueish {
+    color: rgba(1, 32, 96, 0.5);
+}
+
+.text-purple {
+    color: rgb(98, 56, 255);
+}
+
+.text-light-grey {
+    color: rgba(3, 27, 78, 0.7);
+}
+
+.text-dark-grey {
+    color: rgb(78, 95, 131);
+}
+
+.text-bright-gradient {
+    background: linear-gradient(to bottom right, rgb(98, 56, 255), rgb(1, 250, 255), rgb(98, 56, 255));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Background color scheme */
+.mellow-background {
+    background: linear-gradient(to bottom right, rgb(6, 72, 219), rgb(241, 158, 253));
+}
+
+.background-bright {
+    background: linear-gradient(to bottom right, rgb(1, 250, 255), rgb(98, 56, 255));
+}
+
+.bright-background-reverse {
+    background: linear-gradient(to bottom right, rgb(98, 56, 255), rgb(1, 250, 255));
+}
+
+.background-white {
+    background: #FFFFFF;
+}
+
+.background-dark {
+    background: #012060;
+}
+
+.background-dark-gradient {
+    background: linear-gradient(to bottom right, #008de4, #012060);
+}
+
+.background-light {
+    background: rgb(243, 245, 249);
+}
+
+/* Navigation */
+.navigation {
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 7px gray;
+    position: fixed;
+    width: 100%;
+    max-height: 4rem;
+}
+
+.navigation-logo {
+    font-weight: bold;
+    padding: 1rem;
+    font-size: 22px;
+    width: 80px;
+}
+
+.navigation-list {
+    align-items: center;
+}
+
+.navigation-list-item {
+    padding: 0 1rem;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navigation-list-item:first-child {
+    padding: 0 1rem 0 2rem;
+}
+
+/* Big section on top */
+.top {
+    padding: 6rem 0 2em 0;
+    font-weight: bold;
+}
+
+.top-caption {
+    font-size: 2rem;
+}
+
+.top-text {
+    font-weight: 400;
+    line-height: 1.5em;
+    font-size: 1.2rem;
+}
+
+/* Points */
+.point-section {
+    padding: 5rem;
+}
+
+.point-section-header {
+    text-align: center;
+    font-size: 1.5rem;
+    padding-bottom: 0.5em;
+    font-weight: bold;
+}
+
+.point-section-text {
+    font-size: 1.2rem;
+    padding-bottom: 1.2rem;
+    text-align: center;
+}
+
+.point-section-intro {
+    font-size: 1rem;
+    text-align: center;
+    padding-bottom: 2rem;
+    line-height: 1.5rem;
+}
+
+.points-container {
+    display: flex;
+}
+
+.point {
+    padding: 1rem;
+    flex: 1;
+}
+
+.point-header {
+    padding: 1rem 0;
+    font-size: 1.2rem;
+    /* font-weight: bold; */
+}
+
+.point-icon {
+
+}
+
+.point-content {
+    line-height: 1.4rem;
+}
+
+.point-footer {
+    padding-top: 1rem;
+    cursor: pointer;
+}
+
+.point-footer a {
+    text-decoration: none;
+}
+
+.point-footer a:visited {
+    text-decoration: none;
+}
+
+.point-footer a i {
+    font-size: 12px;
+}
+
+.point-buttons-section {
+    flex: 1;
+}
+
+.point-button {
+    text-align: center;
+    cursor: pointer;
+    text-decoration: underline;
+    flex: 1
+}
+
+.expandable {
+    height: 0;
+    transition: height 0.3s ease-out;
+    overflow: hidden;
+}
+
+.expandable-text-section {
+    line-height: 1.5rem;
+    padding: 3rem 1rem 0 1rem;
+}
+
+/* Grid points */
+.grid-point-menu-item {
+    padding: 0.5rem 1.5rem;
+    border-left: aliceblue solid;
+    cursor: pointer;
+    font-weight: 500;
+    transition: color 0.25s linear;
+}
+
+.grid-point-menu-active {
+    border-left: #012060 solid;
+    color: #012060;
+    cursor: default;
+    transition: border-left-color 0.25s linear;
+}
+
+.grid-point-content {
+    flex: 1;
+}
+
+.double-section {
+    flex: 1;
+}
+
+/* Footer */
+.footer {
+    padding: 2rem 0;
+}
+
+.footer-container {
+    font-size: 0.9rem;
+    padding: 1rem;
+}
+
+.footer-list-header {
+    padding-bottom: 0.5rem;
+}
+
+.footer-list-item {
+    padding: 0.2rem 0;
+    cursor: pointer;
+}
